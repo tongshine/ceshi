@@ -1,8 +1,3 @@
-# 1.定位到迅雷电影资源
-# 2.提取子页面链接地址
-# 3.请求地址拿下载链接
-import time
-
 import requests
 from bs4 import BeautifulSoup
 url = 'https://www.umei.cc/bizhitupian/fengjingbizhi/'
@@ -29,5 +24,4 @@ for a in alist:
     with open("imge/"+imge_name,mode = "wb") as f:
         f.write(down_resp.content)
     print("over!", imge_name)
-    time.sleep(1)
 print("all over!!!")
